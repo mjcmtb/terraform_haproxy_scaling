@@ -8,6 +8,7 @@ resource "aws_instance" "zestdemoapp" {
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-71ee470b"]
   subnet_id = "subnet-ae0f44d8"
+  associate_public_ip_address = true
   tags {
     Name = "consul-client-${count.index}"
   }
